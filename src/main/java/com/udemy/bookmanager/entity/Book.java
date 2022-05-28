@@ -27,21 +27,21 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    //@Column(nullable = false, unique = true)
     private String name;
 
-    @Column(nullable = false)
+    //@Column(nullable = false)
     private Integer pages;
     
     
-    @Column(nullable = false)
+    //@Column(nullable = false)
     private Integer chapters;
     
     
-    @Column(nullable = false)
+    //@Column(nullable = false)
     private String isbn;
 
-    @Column(name = "publisher_name", nullable = false, unique = true)
+    //@Column(name = "publisher_name", nullable = false, unique = true)
     private String publisherName;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
